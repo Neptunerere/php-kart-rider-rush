@@ -1,0 +1,16 @@
+{
+    "name": "neptunerere/php-kart-rider-rush",
+    "description": "카트라이더 러쉬 API",
+    "autoload": {
+        "psr-4": {
+            "Neptunerere\\PhpKartRiderRush\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Neptunere",
+            "email": "neomunjeong@gmail.com"
+        }
+    ],
+    "require": {}
+}
