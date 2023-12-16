@@ -12,5 +12,8 @@
             "email": "neomunjeong@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": ">=8.0.0",
+        "guzzlehttp/guzzle": "^7.8"
+    }
 }
