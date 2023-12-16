@@ -4,8 +4,15 @@ declare(strict_types=1);
 
 namespace Neptunerere\PhpKartRiderRush;
 
+use Neptunerere\PhpKartRiderRush\Command\CommandInterface;
+
 class KartRiderRush
 {
+    /**
+     * @var array
+     */
+    protected $runners = array();
+
     /**
      * @var Configuration
      */
@@ -32,5 +39,31 @@ class KartRiderRush
     {
         $this->configuration = $configuration;
         return $this;
+    }
+
+    public function addRunners(array $runners)
+    {
+        foreach($runners as $runner) {
+            $this->addRunner($runner);
+        }
+
+        return $this;
+    }
+
+    public function addRunner(RunnerInterface $runner)
+    {
+        $this->runners[] = $runner->setConfig($this->configuration);
+        return $this;
+    }
+
+    public function run(CommandInterface $commandInterface)
+    {
+        $result = null;
+
+        foreach($this->runners as $runner) {
+            $result = $runner->run($commandInterface, $result);
+        }
+
+        return $result;
     }
 }
