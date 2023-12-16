@@ -52,4 +52,20 @@ class Configuration
         $this->_options[self::API_KEY] = $apiKey;
         return $this;
     }
+
+      /**
+     * @return string
+     */
+    public function getApiKey()
+    {
+        return $this->_options[self::API_KEY];
+    }
+
+    /**
+     * @return string
+     */
+    public function getBaseApiUrl()
+    {
+        return $this->_options[self::BASE_API_URL];
+    }
 }

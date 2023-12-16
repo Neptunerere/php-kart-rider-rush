@@ -38,8 +38,8 @@ class GuzzleUrlBuilder implements UrlBuilderInterface
     public function build(CommandInterface $commandInterface)
     {
         $uri = sprintf('%s/%s/%s/%s',
-            $commandInterface->getGameName(),
             rtrim($this->getBaseUrl()),
+            $commandInterface->getGameName(),
             $commandInterface->getVersion(),
             $commandInterface->getMethod(),
         );

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Neptunerere\PhpKartRiderRush;
 
 use Neptunerere\PhpKartRiderRush\Command\CommandInterface;
+use Neptunerere\PhpKartRiderRush\Runner\RunnerInterface;
 
 class KartRiderRush
 {
