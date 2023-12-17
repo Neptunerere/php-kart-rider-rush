@@ -52,7 +52,7 @@ class GuzzleAsyncRunner extends AbstractRunner implements RunnerInterface
 
         if($config = $this->getConfig()) {
             if(!empty($config->getApiKey())) {
-                $options['header']['x-nxopen-api-key'] = $config->getApiKey();
+                $options['headers']['x-nxopen-api-key'] = $config->getApiKey();
             }
             
             $this->urlBuilder->setBaseUrl($config->getBaseApiUrl());
