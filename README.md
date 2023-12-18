@@ -82,3 +82,5 @@ var_dump($basicResult);
 var_dump($titleEquipmentResult);
 exit;
  ```
+# Credits
+Data based on NEXON Open API
