@@ -1,3 +1,17 @@
+# What is PHP-KART-RIDER-RUSH?
+
+This is a library designed to easily integrate the Nexon KartRider Rush Plus API with PHP. 
+
+Try out the API more effortlessly with this library!
+
+# How to use
+
+1. You can retrieve the unique identifier number (ouid) through the FindUserByAccessId method.
+2. You can call the FindUserByName method to retrieve basic information and the FindUserByTitleEquipment method to retrieve equipped title information using the obtained ouid.
+
+The Nexon Open API website.  
+https://openapi.nexon.com/game/kartrush/?id=11&shallow=true
+ 
  ```
 #!/usr/bin/env php
 <?php
